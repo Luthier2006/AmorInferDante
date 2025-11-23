@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor X Inferno X Dante</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            color: aqua;
+        }
+        p{
+            color: white;
+        }
+        .container {
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgb(255, 0, 0);
+            width: 40%;
+            height: 680px;
+            margin-left: 30%;
+            text-align: center;
+        }
+        .menu-button {
+            width: 100%;
+            background: #000000;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .menu-button:hover {
+            color: #ff0000;
+        }
+
+        .dropdown {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: #000000;
+            color: #fff;
+            box-shadow: 0 10px 30px rgb(255, 0, 0);
+            padding: 0 10px;
+            border-radius: 20px;
+            width: 40%;
+        }
+
+        .dropdown.open {
+            padding: 10px;
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Amor X Inferno X Dante</h1>
+    <div class="container"><br>
+        <button class="menu-button" onclick="toggleMenu('m1')">Estrutura da Obra Dantesca</button>
+        <div id="m1" class="dropdown">
+            <p>° Inspirado na Divina Comédia de Dante;</p>
+        <p>° Momentos épicos e poéticos para a trama;</p>
+        <p>° Estética brutal e exagerada.</p>
+    </div>
+    
+    <button class="menu-button" onclick="toggleMenu('m2')">Características da Obra</button>
+    <div id="m2" class="dropdown">
+        <p>Simbolismo épico, poético e trágico como um todo.</p>
+    </div>
+
+    <button class="menu-button" onclick="toggleMenu('m3')">Descrição Narrativa</button>
+    <div id="m3" class="dropdown">
+        <p>° Não haverá apenas combate físico, mas filosófico, simbólico e conceitual;</p>
+        <p>° Brutalidade sendo descrita de forma poética, quase visual, misturando beleza e horror.</p>
+    </div>
+
+    <button class="menu-button" onclick="toggleMenu('m4')">Personagens Como Ideias Vivas</button>
+    <div id="m4" class="dropdown">
+        <p>° Cada um pode representar um conceito físico (força bruta, ou mesmo status), ou metafísico (amor, ódio ou orgulho);</p>    
+    </div>
+
+    <button class="menu-button" onclick="toggleMenu('m5')">Sistema de Poder Épico</button>
+    <div id="m5" class="dropdown">
+        <p>° Cada personagem tem um poder único, podendo exigir mais profundidade de estratégias e complexidade de combate e narrativa.</p>
+    </div>
+    
+    <button class="menu-button" onclick="toggleMenu('m6')">Tom Poético e Filosófico</button>
+    <div id="m6" class="dropdown">
+        <p>° Usa terza rima para manter ritmo e solenidade;</p>
+        <P>° Usa o revesamento de hendecassílabo e decassílabo para estruturar os versos poéticos.</P>
+    </div>
+    
+    <button class="menu-button" onclick="toggleMenu('m7')">História do Protagonista</button>
+    <div id="m7" class="dropdown">
+        <p>° Perdeu a sua esposa humana, o que o torna vingativo;</p>
+        <p>° É capturado pela Ordem, se tornando escravo de sua própria vingança;</p>
+        <p>° É traído pela Ordem, e é selado por mais de 600 anos;</p>
+        <p>° É despertado em 2012, mas sua memória é apagada, fazendo-o novamente se tornar escravo de sua natureza infernal, e a lidar novamente com o luto pela morte de sua esposa;</p>
+        <p>° Está tentando se adaptar ao tempo moderno.</p>
+    </div>
+    
+    <button class="menu-button" onclick="toggleMenu('m8')">Temas Centrais da Saga</button>
+    <div id="m8" class="dropdown">
+        <p>° Amor X Perda;</p>
+        <p>° Identidade Oculta;</p>
+        <p>° Conduta X Livre-Arbítrio;</p>
+        <p>° Céu X Inferno;</p>
+        <p>° Renascimento.</p>
+    </div><br><br>
+
+    <p>clique no link abaixo ↓</p>
+    
+    <a href="./text.html">✠ Ler AmorInferDante ✠</a><br>
+    <script>
+        function toggleMenu(id) {
+            const menu = document.getElementById(id);
+            menu.classList.toggle("open");
+        }
+    </script>
+
+</body>
+</html>
