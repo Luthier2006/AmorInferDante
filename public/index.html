@@ -1,136 +1,457 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amor X Inferno X Dante</title>
-    <style>
-        body {
-            background-color: black;
-        }
-        h1 {
-            color: white;
-            text-align: center;
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
-        a:hover {
-            color: aqua;
-        }
-        p{
-            color: white;
-        }
-        .container {
-            align-items: center;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgb(255, 0, 0);
-            width: 40%;
-            height: 680px;
-            margin-left: 30%;
-            text-align: center;
-        }
-        .menu-button {
-            width: 100%;
-            background: #000000;
-            color: #fff;
-            padding: 12px;
-            border: none;
-            text-align: center;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .menu-button:hover {
-            color: #ff0000;
-        }
+<title>Amor X Inferno X Dante</title>
 
-        .dropdown {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-            background: #000000;
-            color: #fff;
-            box-shadow: 0 10px 30px rgb(255, 0, 0);
-            padding: 0 10px;
-            border-radius: 20px;
-            width: 40%;
-            margin-left: 30%;
-        }
+<!-- Fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 
-        .dropdown.open {
-            padding: 10px;
-            max-height: 500px;
-        }
-    </style>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Cormorant Garamond',serif;
+
+    background:
+    linear-gradient(rgba(0,0,0,.93),rgba(0,0,0,.95)),
+    url("https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:#ece3d2;
+
+    min-height:100vh;
+}
+
+header{
+
+    text-align:center;
+    padding:60px 20px 30px;
+
+}
+
+header h1{
+
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    color:#d4b06a;
+
+    text-shadow:
+    0 0 8px #7d0000,
+    0 0 18px #000;
+
+    letter-spacing:4px;
+
+}
+
+header p{
+
+    margin-top:20px;
+    font-size:1.3rem;
+    color:#b9ab8d;
+
+    font-style:italic;
+
+}
+
+.container{
+
+    width:92%;
+    max-width:900px;
+
+    margin:auto;
+
+    background:rgba(10,10,10,.88);
+
+    border:1px solid #5d0a0a;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 25px rgba(120,0,0,.55);
+
+    padding:35px;
+
+    backdrop-filter:blur(5px);
+
+}
+
+.menu-button{
+
+    width:100%;
+
+    padding:18px;
+
+    margin:12px 0;
+
+    font-family:'Cinzel',serif;
+
+    font-size:18px;
+
+    color:#d8b97d;
+
+    background:#090909;
+
+    border:1px solid #6b1010;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    letter-spacing:1px;
+
+}
+
+.menu-button:hover{
+
+    background:#3d0707;
+
+    color:white;
+
+    transform:scale(1.02);
+
+    box-shadow:
+    0 0 18px crimson;
+
+}
+
+.dropdown{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .45s ease;
+
+    border-left:2px solid #b38a43;
+
+    margin-bottom:10px;
+
+}
+
+.dropdown.open{
+
+    max-height:700px;
+
+    padding:20px;
+
+}
+
+.dropdown p{
+
+    margin:10px 0;
+
+    line-height:1.8;
+
+    font-size:1.2rem;
+
+}
+
+.link{
+
+    text-align:center;
+
+    margin-top:35px;
+
+}
+
+.link p{
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+}
+
+.link a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:#d4b06a;
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    padding:15px 30px;
+
+    border:1px solid #6d0c0c;
+
+    border-radius:8px;
+
+    transition:.4s;
+
+}
+
+.link a:hover{
+
+    background:#5c0000;
+
+    color:white;
+
+    box-shadow:0 0 20px crimson;
+
+}
+
+footer{
+
+    text-align:center;
+
+    padding:45px;
+
+    color:#6d6d6d;
+
+    font-style:italic;
+
+}
+
+/* Responsivo */
+
+@media(max-width:768px){
+
+header h1{
+
+font-size:2rem;
+
+}
+
+header p{
+
+font-size:1rem;
+
+}
+
+.container{
+
+padding:18px;
+
+}
+
+.menu-button{
+
+font-size:15px;
+
+padding:15px;
+
+}
+
+.dropdown p{
+
+font-size:18px;
+
+}
+
+.link a{
+
+font-size:18px;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <h1>Amor X Inferno X Dante</h1>
-    <div class="container"><br>
-        <button class="menu-button" onclick="toggleMenu('m1')">Estrutura da Obra Dantesca</button>
-        <div id="m1" class="dropdown">
-            <p>° Inspirado na Divina Comédia de Dante;</p>
-        <p>° Momentos épicos e poéticos para a trama;</p>
-        <p>° Estética brutal e exagerada.</p>
-    </div>
-    
-    <button class="menu-button" onclick="toggleMenu('m2')">Características da Obra</button>
-    <div id="m2" class="dropdown">
-        <p>Simbolismo épico, poético e trágico como um todo.</p>
-    </div>
 
-    <button class="menu-button" onclick="toggleMenu('m3')">Descrição Narrativa</button>
-    <div id="m3" class="dropdown">
-        <p>° Não haverá apenas combate físico, mas filosófico, simbólico e conceitual;</p>
-        <p>° Brutalidade sendo descrita de forma poética, quase visual, misturando beleza e horror.</p>
-    </div>
+<header>
 
-    <button class="menu-button" onclick="toggleMenu('m4')">Personagens Como Ideias Vivas</button>
-    <div id="m4" class="dropdown">
-        <p>° Cada um pode representar um conceito físico (força bruta, ou mesmo status), ou metafísico (amor, ódio ou orgulho);</p>    
-    </div>
+<h1>✠ Amor X Inferno X Dante ✠</h1>
 
-    <button class="menu-button" onclick="toggleMenu('m5')">Sistema de Poder Épico</button>
-    <div id="m5" class="dropdown">
-        <p>° Cada personagem tem um poder único, podendo exigir mais profundidade de estratégias e complexidade de combate e narrativa.</p>
-    </div>
-    
-    <button class="menu-button" onclick="toggleMenu('m6')">Tom Poético e Filosófico</button>
-    <div id="m6" class="dropdown">
-        <p>° Usa terza rima para manter ritmo e solenidade;</p>
-        <P>° Usa o revesamento de hendecassílabo e decassílabo para estruturar os versos.</P>
-    </div>
-    
-    <button class="menu-button" onclick="toggleMenu('m7')">História do Protagonista</button>
-    <div id="m7" class="dropdown">
-        <p>° Perdeu a sua esposa humana,tornando-se vingativo;</p>
-        <p>° É capturado pela Ordem, se tornando escravo de sua própria vingança;</p>
-        <p>° É traído pela Ordem, e é selado por mais de 600 anos;</p>
-        <p>° É despertado em 2012, mas sua memória é apagada, fazendo-o novamente se tornar escravo de sua natureza infernal, e a lidar novamente com o luto pela morte de sua esposa;</p>
-        <p>° Está tentando se adaptar ao tempo moderno.</p>
-    </div>
-    
-    <button class="menu-button" onclick="toggleMenu('m8')">Temas Centrais da Saga</button>
-    <div id="m8" class="dropdown">
-        <p>° Amor X Perda;</p>
-        <p>° Identidade Oculta;</p>
-        <p>° Conduta X Livre-Arbítrio;</p>
-        <p>° Céu X Inferno;</p>
-        <p>° Renascimento.</p>
-    </div><br><br>
+<p>
+Uma epopeia inspirada em Dante Alighieri, onde Amor,
+Inferno e Redenção caminham lado a lado.
+</p>
 
-    <p>clique no link abaixo ↓</p>
-    
-    <a href="./text.html">✠ Ler AmorInferDante ✠</a><br>
-    <script>
-        function toggleMenu(id) {
-            const menu = document.getElementById(id);
-            menu.classList.toggle("open");
-        }
-    </script>
+</header>
+
+<div class="container">
+
+<button class="menu-button" onclick="toggleMenu('m1')">
+✠ Estrutura da Obra Dantesca
+</button>
+
+<div id="m1" class="dropdown">
+
+<p>• Inspirado na Divina Comédia.</p>
+
+<p>• Estrutura narrativa épica e filosófica.</p>
+
+<p>• Simbolismo religioso e medieval.</p>
+
+</div>
+
+<button class="menu-button" onclick="toggleMenu('m2')">
+✠ Características da Obra
+</button>
+
+<div id="m2" class="dropdown">
+
+<p>• Simbolismo.</p>
+
+<p>• Tragédia.</p>
+
+<p>• Épico.</p>
+
+<p>• Filosofia.</p>
+
+</div>
+
+<button class="menu-button" onclick="toggleMenu('m3')">
+✠ Descrição Narrativa
+</button>
+
+<div id="m3" class="dropdown">
+
+<p>• Combates físicos e conceituais.</p>
+
+<p>• Brutalidade descrita poeticamente.</p>
+
+<p>• Horror e beleza coexistem.</p>
+
+</div>
+
+<button class="menu-button" onclick="toggleMenu('m4')">
+✠ Personagens
+</button>
+
+<div id="m4" class="dropdown">
+
+<p>• Cada personagem representa uma ideia.</p>
+
+<p>• Amor.</p>
+
+<p>• Ódio.</p>
+
+<p>• Orgulho.</p>
+
+<p>• Esperança.</p>
+
+<p>• Sacrifício.</p>
+
+</div>
+
+<button class="menu-button" onclick="toggleMenu('m5')">
+✠ Sistema de Poder
+</button>
+
+<div id="m5" class="dropdown">
+
+<p>• Poderes únicos.</p>
+
+<p>• Estratégia.</p>
+
+<p>• Simbolismo.</p>
+
+<p>• Conceitos vivos.</p>
+
+</div>
+
+<button class="menu-button" onclick="toggleMenu('m6')">
+✠ Tom Literário
+</button>
+
+<div id="m6" class="dropdown">
+
+<p>• Terza Rima.</p>
+
+<p>• Hendecassílabo.</p>
+
+<p>• Decassílabo.</p>
+
+<p>• Solenidade Dantesca.</p>
+
+</div>
+
+<button class="menu-button" onclick="toggleMenu('m7')">
+✠ História do Protagonista
+</button>
+
+<div id="m7" class="dropdown">
+
+<p>• Perde sua esposa.</p>
+
+<p>• Busca vingança.</p>
+
+<p>• É escravizado pela Ordem.</p>
+
+<p>• Traído.</p>
+
+<p>• Selado por mais de seis séculos.</p>
+
+<p>• Desperta em 2012 sem memória.</p>
+
+<p>• Precisa enfrentar novamente sua natureza infernal.</p>
+
+</div>
+
+<button class="menu-button" onclick="toggleMenu('m8')">
+✠ Temas Centrais
+</button>
+
+<div id="m8" class="dropdown">
+
+<p>• Amor × Perda.</p>
+
+<p>• Céu × Inferno.</p>
+
+<p>• Livre-Arbítrio.</p>
+
+<p>• Identidade.</p>
+
+<p>• Renascimento.</p>
+
+</div>
+
+<div class="link">
+
+<p>✠ Inicie a leitura ✠</p>
+
+<a href="text.html">
+
+Ler "Amor X Inferno X Dante"
+
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+"Abandonai toda esperança, vós que entrais."
+
+</footer>
+
+<script>
+
+function toggleMenu(id){
+
+const menu=document.getElementById(id);
+
+menu.classList.toggle("open");
+
+}
+
+</script>
 
 </body>
-</html>
+    </html>
