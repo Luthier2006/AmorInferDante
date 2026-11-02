@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <title>AmorInferDante</title>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+   /* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap');
 
 *{
     margin:0;
@@ -143,6 +143,213 @@ strong{
     margin:50px 0;
 
     }
+*/
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+
+    background:
+    linear-gradient(rgba(0,0,0,.93),rgba(0,0,0,.95)),
+    url("https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #e6dcc7;
+    padding: 40px 20px;
+}
+
+/* ESTRUTURA DO LIVRO */
+
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+
+    background: rgba(8,8,8,.90);
+
+    border: 1px solid #6b1111;
+    border-radius: 20px;
+
+    padding: 50px;
+
+    box-shadow: 0 0 35px rgba(120,0,0,.55);
+}
+
+/* TÍTULO PRINCIPAL */
+
+h1 {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    color: #c9a968;
+
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+
+    text-shadow: 0 0 10px #6b0000;
+}
+
+/* IDENTIFICAÇÃO DO LIVRO */
+
+h2 {
+    font-family: 'Cinzel', serif;
+    color: #c9a968;
+
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+/* TEXTO */
+
+p {
+    font-size: 1.35rem;
+    text-align: justify;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+/* POESIA */
+
+.poesia {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #f3e4c4;
+}
+
+/* TEXTO DOS CÂNTICOS */
+
+.font {
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.9;
+
+    white-space: pre-line;
+    color: #e6dcc7;
+}
+
+.font::first-letter {
+    font-size: 2.5rem;
+    color: #c9a968;
+}
+
+/* SEPARADORES */
+
+strong {
+    display: block;
+    text-align: center;
+    color: #c9a968;
+    font-size: 22px;
+    letter-spacing: 5px;
+    margin: 50px 0;
+}
+
+/* ================================= */
+/* ADAPTAÇÃO PARA COMPUTADORES       */
+/* ================================= */
+
+@media screen and (min-width: 1100px) {
+
+    body {
+        padding: 65px 40px;
+    }
+
+    main {
+        max-width: 1100px;
+        padding: 75px 100px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 3.8rem;
+        letter-spacing: 6px;
+        margin-bottom: 55px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-top: 60px;
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 2.1;
+    }
+
+    .poesia {
+        font-size: 1.7rem;
+        margin-bottom: 35px;
+    }
+
+    .font {
+        max-width: 750px;
+        margin: 0 auto 35px;
+        font-size: 1.55rem;
+        line-height: 2;
+    }
+
+    strong {
+        font-size: 24px;
+        margin: 65px 0;
+    }
+}
+
+/* ================================= */
+/* ADAPTAÇÃO PARA TELAS PEQUENAS     */
+/* ================================= */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 18px 10px;
+        background-attachment: scroll;
+    }
+
+    main {
+        padding: 25px 18px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+    }
+
+    .poesia {
+        font-size: 1.2rem;
+    }
+
+    .font {
+        font-size: 1.15rem;
+        line-height: 1.8;
+    }
+
+    strong {
+        font-size: 12px;
+        letter-spacing: 1px;
+        overflow-wrap: anywhere;
+    }
+}
 </style>
 </head>
 <body>
